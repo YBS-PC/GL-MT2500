@@ -41,6 +41,9 @@ jobs:
       actions: write
 
     steps:
+    - name: Check disk space
+      run: df -h
+
     - name: Checkout
       uses: actions/checkout@main
 
