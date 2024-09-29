@@ -44,6 +44,11 @@ jobs:
     - name: Check disk space
       run: df -h
 
+    - name: Clean previous builds
+      run: |
+        make clean
+        make dirclean
+
     - name: Checkout
       uses: actions/checkout@main
 
