@@ -49,6 +49,9 @@ jobs:
         make clean
         make dirclean
 
+    - name: Check disk space
+      run: df -h
+
     - name: Checkout
       uses: actions/checkout@main
 
