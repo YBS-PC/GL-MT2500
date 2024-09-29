@@ -46,8 +46,8 @@ jobs:
 
     - name: Clean previous builds
       run: |
-        make clean
-        make dirclean
+        cd openwrt
+        make clean || make dirclean || echo "No clean target found, skipping..."
 
     - name: Check disk space
       run: df -h
@@ -81,6 +81,13 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
+
+    - name: Check target device and date
+      run: |
+        cd openwrt
+        grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
+        [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)"
+        echo "FILE_DATE=_$(date +"%Y%m%d%H%M")"
 
     - name: update source
       run: cd openwrt && ./scripts/feeds update -a
