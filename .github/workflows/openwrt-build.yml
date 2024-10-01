@@ -21,7 +21,7 @@ on:
 
 env:
   #REPO_URL: https://github.com/immortalwrt/immortalwrt.git
-  REPO_URL: https://github.com/openwrt/openwrt.git;openwrt-23.05
+  REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/mt2500.config
