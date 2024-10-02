@@ -88,7 +88,19 @@ jobs:
       #  done
 
     - name: installation source
-      run: cd openwrt && ./scripts/feeds install -a
+      #run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        cd openwrt
+        ./scripts/feeds install -p chinadns-ng
+        ./scripts/feeds install -p luci-app-homeproxy
+        ./scripts/feeds install -p youtubeUnblock
+        ./scripts/feeds install -p internet-detector
+        ./scripts/feeds install -p luci-app-internet-detector
+        ./scripts/feeds install -p luci-i18n-internet-detector-ru
+        ./scripts/feeds install -p luci-app-log
+        ./scripts/feeds install -p luci-i18n-log-ru
+        ./scripts/feeds install -a
+        
 
     - name: Loading Custom Configurations
       run: |
