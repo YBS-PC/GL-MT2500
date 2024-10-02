@@ -21,9 +21,5 @@
 echo "src-git iwrt_packages https://github.com/immortalwrt/packages.git;openwrt-23.05#chinadns-ng" >> feeds.conf.default
 echo "src-git iwrt_luci https://github.com/immortalwrt/luci.git;openwrt-23.05#luci-app-homeproxy" >> feeds.conf.default
 #
-echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#internet-detector" >> feeds.conf.default
-echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#luci-app-internet-detector" >> feeds.conf.default
-echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#luci-i18n-internet-detector-ru" >> feeds.conf.default
-echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#luci-app-log" >> feeds.conf.default
-echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#luci-i18n-log-ru" >> feeds.conf.default
+echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages#internet-detector luci-app-internet-detector luci-i18n-internet-detector-ru luci-app-log luci-i18n-log-ru" >> feeds.conf.default
 echo "src-git youtubeUnblock https://github.com/Waujito/youtubeUnblock.git;openwrt#youtubeUnblock" >> feeds.conf.default
