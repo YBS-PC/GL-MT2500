@@ -129,8 +129,6 @@ jobs:
           echo "device-name=$(cat DEVICE_NAME)" >> $GITHUB_OUTPUT
         fi
         echo "file-date=$(date +"%Y%m%d%H%M")" >> $GITHUB_OUTPUT
-        echo $device-name
-        echo $DEVICE_NAME
 
     - name: Inspection of space utilization
       if: (!cancelled())
